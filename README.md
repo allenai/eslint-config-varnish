@@ -12,55 +12,63 @@ definitions, see [this documentation](https://eslint.org/docs/user-guide/configu
 
 ## Usage
 
-Install it and it's peer dependencies:
+1. Install it and it's peer dependencies:
 
-```shell
-~ yarn add @allenai/eslint-config-varnish \
-    @typescript-eslint/eslint-plugin \
-    @typescript-eslint/parser \
-    eslint \
-    eslint-config-prettier \
-    eslint-config-standard \
-    eslint-plugin-import \
-    eslint-plugin-node \
-    eslint-plugin-prettier \
-    eslint-plugin-promise \
-    eslint-plugin-react \
-    eslint-plugin-standard \
-    prettier
-```
+    ```shell
+    ~ yarn add @allenai/eslint-config-varnish \
+        @typescript-eslint/eslint-plugin \
+        @typescript-eslint/parser \
+        eslint \
+        eslint-config-prettier \
+        eslint-config-standard \
+        eslint-plugin-import \
+        eslint-plugin-node \
+        eslint-plugin-prettier \
+        eslint-plugin-promise \
+        eslint-plugin-react \
+        eslint-plugin-standard \
+        prettier
+    ```
 
-Create a file with patterns specifying stuff you'd like to ignore:
+2. Create a file with patterns specifying stuff you'd like to ignore:
 
-```
-~ echo node_modules/ >> .eslintignore
-```
+    ```bash
+    ~ cat <<EOF > .eslintignore
+    .next/
+    node_modules/
+    package.json
+    tsconfig.json
+    EOF
+    ```
 
-Create a config file, and configure `eslint` to use this package as a base:
+3. Create a config file, and configure `eslint` to use this package as a base:
 
-```bash
-cat <<EOF > .eslintrc.js
-module.exports = {
-   extends: [ "@allenai/eslint-config-varnish" ]
-};
-EOF
-```
+    ```bash
+    cat <<EOF > .eslintrc.js
+    module.exports = {
+    extends: [ "@allenai/eslint-config-varnish" ]
+    };
+    EOF
+    ```
 
-Add targets for linting and reformatting code to your `package.json` file:
+4. Add targets for linting and reformatting code to your `package.json` file:
 
-```json
-"scripts": {
-    "lint": "eslint '**/*.{js,ts,tsx,json}' && echo '💫  Lint complete.'",
-    "lint:fix": "eslint '**/*.{js,ts,tsx,json}' --fix && echo '🛠  Lint --fix complete.'",
-}
-```
+    ```json
+    "scripts": {
+        "lint": "eslint '**/*.{js,ts,tsx,json}' && echo '💫  Lint complete.'",
+        "lint:fix": "eslint '**/*.{js,ts,tsx,json}' --fix && echo '🛠  Lint --fix complete.'",
+    }
+    ```
 
-Try it out:
+5. Try it out:
 
-```json
-yarn lint
-yarn lint:fix
-```
+    ```bash
+    # See what's wrong
+    ~ yarn lint
+
+    # Reformat and fix things
+    ~ yarn lint:fix
+    ```
 
 ## Publishing
 
