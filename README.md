@@ -33,7 +33,7 @@ Install it and it's peer dependencies:
 Create a file with patterns specifying stuff you'd like to ignore:
 
 ```
-~ cat node_modules/ >> .eslintignore
+~ echo node_modules/ >> .eslintignore
 ```
 
 Add targets for linting and reformatting code to your `package.json` file:
