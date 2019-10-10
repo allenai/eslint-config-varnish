@@ -36,6 +36,16 @@ Create a file with patterns specifying stuff you'd like to ignore:
 ~ echo node_modules/ >> .eslintignore
 ```
 
+Create a config file, and configure `eslint` to use this package as a base:
+
+```bash
+cat <<EOF > .eslintrc.js
+module.exports = {
+   extends: [ "@allenai/eslint-config-varnish" ]
+};
+EOF
+```
+
 Add targets for linting and reformatting code to your `package.json` file:
 
 ```json
