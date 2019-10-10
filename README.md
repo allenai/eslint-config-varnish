@@ -23,7 +23,7 @@ To publish a new version after making changes, follow these steps:
 ```bash
 ~ npm version major|minor|patch
 ~ git push --tags origin master
-~ npm publish
+~ npm publish --access public
 ```
 
 🤘 ⛵️ 🎨
