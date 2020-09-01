@@ -1,6 +1,6 @@
 {
   "name": "@allenai/eslint-config-varnish",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Common linting and formatting configuration for Varnish projects.",
   "main": "index.js",
   "repository": "https://github.com/allenai/varnish",
