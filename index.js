@@ -51,6 +51,9 @@ module.exports = {
             }
         ],
         "no-useless-constructor": "off",
-        "@typescript-eslint/no-useless-constructor": "error"
+        "@typescript-eslint/no-useless-constructor": "error",
+        // https://github.com/typescript-eslint/typescript-eslint/issues/2502
+        'no-use-before-define': 0,
+        '@typescript-eslint/no-use-before-define': 1,
     }
 }
