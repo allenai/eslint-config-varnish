@@ -6,7 +6,7 @@
  * @see https://eslint.org/docs/user-guide/configuring
  */
 module.exports = {
-    extends: [ "standard", "plugin:prettier/recommended", 'plugin:mdx/recommended' ],
+    extends: [ "standard", "plugin:prettier/recommended" ],
     env: {
         browser: true,
         node: true,
@@ -66,14 +66,4 @@ module.exports = {
             },
         ],
     },
-    overrides: [
-        {
-            files: ['*.mdx'],
-            rules: {
-                'react/jsx-no-undef': 0,
-                'no-undef': 0,
-                '@typescript-eslint/no-unused-vars': 0,
-            },
-        },
-    ],
 }
