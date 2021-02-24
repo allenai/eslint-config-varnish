@@ -6,14 +6,18 @@
  * @see https://eslint.org/docs/user-guide/configuring
  */
 module.exports = {
-    extends: [ "standard", "plugin:prettier/recommended" ],
+    extends: [ "standard", "plugin:prettier/recommended", 'plugin:mdx/recommended' ],
     env: {
         browser: true,
-        es6: true
+        node: true,
+        es6: true,
+        mocha: true,
     },
     globals: {
         Atomics: "readonly",
-        SharedArrayBuffer: "readonly"
+        SharedArrayBuffer: "readonly",
+        JSX: true,
+        React: true,
     },
     parser: "@typescript-eslint/parser",
     parserOptions: {
@@ -52,8 +56,24 @@ module.exports = {
         ],
         "no-useless-constructor": "off",
         "@typescript-eslint/no-useless-constructor": "error",
-        // https://github.com/typescript-eslint/typescript-eslint/issues/2502
         'no-use-before-define': 0,
-        '@typescript-eslint/no-use-before-define': 1,
-    }
+        '@typescript-eslint/no-use-before-define': 0,
+        'no-restricted-imports': [
+            'warn',
+            {
+                name: 'antd',
+                message: `To import X use "import X from 'antd/es/x'"`,
+            },
+        ],
+    },
+    overrides: [
+        {
+            files: ['*.mdx'],
+            rules: {
+                'react/jsx-no-undef': 0,
+                'no-undef': 0,
+                '@typescript-eslint/no-unused-vars': 0,
+            },
+        },
+    ],
 }

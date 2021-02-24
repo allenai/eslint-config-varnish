@@ -22,6 +22,7 @@ definitions, see [this documentation](https://eslint.org/docs/user-guide/configu
         eslint-config-prettier \
         eslint-config-standard \
         eslint-plugin-import \
+        eslint-plugin-mdx \
         eslint-plugin-node \
         eslint-plugin-prettier \
         eslint-plugin-promise \
