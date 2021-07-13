@@ -65,5 +65,13 @@ module.exports = {
                 message: `To import X use "import X from 'antd/es/x'"`,
             },
         ],
+        'import/order': [
+            'error',
+            {
+                groups: ['internal', 'external'],
+                'newlines-between': 'always-and-inside-groups',
+            },
+        ],
+        'react/jsx-no-target-blank': 'error',
     },
 }
