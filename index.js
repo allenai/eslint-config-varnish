@@ -73,5 +73,6 @@ module.exports = {
             },
         ],
         'react/jsx-no-target-blank': 'error',
+        'eol-last': ['error', 'always'],
     },
 }
