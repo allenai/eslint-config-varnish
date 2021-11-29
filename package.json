@@ -6,6 +6,11 @@
   "repository": "https://github.com/allenai/varnish",
   "author": "REVIZ <reviz@allenai.org>",
   "license": "Apache-2.0",
+  "keywords": [
+    "deprecated",
+    "obsolete",
+    "archived"
+  ],
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">=4.1.1",
     "@typescript-eslint/parser": ">=4.1.1",
